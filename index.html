@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>SmartSchool Portal | Greenfield Academy</title>
+    <meta name="description" content="A secure digital school management portal for students, teachers, parents and administrators." />
+    <meta name="theme-color" content="#166534" />
+    <meta name="color-scheme" content="light" />
+    <meta name="application-name" content="SmartSchool Portal" />
+    <meta name="author" content="Midex Edits" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="SmartSchool Portal | Greenfield Academy" />
+    <meta property="og:description" content="A secure digital school management portal for students, teachers, parents and administrators." />
+    <meta property="og:site_name" content="SmartSchool" />
+
+    <!-- Mobile web app hints (Android / iOS home-screen installs) -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SmartSchool" />
+
+    <!-- Paint the app background before React mounts, avoiding a white flash. -->
+    <style>
+      html, body { margin: 0; background: #F8FAFC; }
+      #root:empty { min-height: 100vh; background: #F8FAFC; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

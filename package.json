@@ -1,0 +1,41 @@
+{
+  "name": "smartschool",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SmartSchool — a reusable school management portal for students, teachers, parents and administrators. Developed and maintained by Midex Edits.",
+  "author": "Midex Edits <support@midexedits.com>",
+  "license": "UNLICENSED",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "esbuild test/smoke.ts --bundle --format=esm --outfile=test/smoke.mjs --platform=browser --external:@supabase/supabase-js --define:import.meta.env='{}' && node test/run-smoke.mjs",
+    "check:sql": "node validate_sql.cjs supabase/schema.sql && node validate_sql.cjs supabase/seed.sql && node validate_sql.cjs supabase/migrations/0002_multitenant_grading_publishing.sql && node check_policies.cjs supabase/schema.sql && node check_policies.cjs supabase/migrations/0002_multitenant_grading_publishing.sql"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "autoprefixer": "^10.6.1",
+    "lucide-react": "^1.59.0",
+    "postcss": "^8.5.31",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4",
+    "recharts": "^3.10.1",
+    "tailwindcss": "^3.4.19"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
+    "libpg-query": "^18.1.5",
+    "oxlint": "^1.88.0",
+    "playwright": "^1.64.1",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.4"
+  }
+}
